@@ -37,10 +37,10 @@ dados_nm_fantasia_google <- dados_cia_teste_nome_fantasia %>%
   mutate(latitude = coalesce(latitude, latitude_google),
          longitude = coalesce(longitude, longitude_google),
          nome_fantasia = replace_na(nome_fantasia, ''),
-         texto_com_br = str_c(paste0('Razão Social: ', razao_social),
+         texto_com_br = str_c(paste0('Razao Social: ', razao_social),
                        paste0('Nome Fantasia: ', nome_fantasia),
                        sep='<br>'),
-         texto_sem_br = str_c(paste0('Razão Social: ', razao_social),
+         texto_sem_br = str_c(paste0('Razao Social: ', razao_social),
                               paste0('Nome Fantasia: ', nome_fantasia),
                               sep=' '))
 
